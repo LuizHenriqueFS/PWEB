@@ -1,0 +1,15 @@
+body{
+    margin: 30px 300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2C5E5E;
+    background-color: #6BE3E3;
+}
+h1{
+    font-size: 45px;
+}
+p{
+    font-size: 35px;
+}
+button{
+    font-size: 20px;
+}
