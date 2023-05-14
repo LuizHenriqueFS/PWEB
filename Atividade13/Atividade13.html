@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transformar Texto</title>
+  <p>ATIVIDADE 13</p>
+</head>
+<body>
+  <label for="texto">Texto:</label>
+  <input type="text" id="texto" name="texto" onchange="transformarTexto()"><br><br>
+  
+  <label for="maiusculas">Maiúsculas</label>
+  <input type="checkbox" id="maiusculas" name="maiusculas" onclick="trocarCheckbox(this)"><br><br>
+  
+  <label for="minusculas">Minúsculas</label>
+  <input type="checkbox" id="minusculas" name="minusculas" onclick="trocarCheckbox(this)"><br><br>
+  
+  <script>
+    function transformarTexto() {
+      var textoInput = document.getElementById("texto");
+      var maiusculasCheckbox = document.getElementById("maiusculas");
+      var minusculasCheckbox = document.getElementById("minusculas");
+      
+      if (maiusculasCheckbox.checked) {
+        textoInput.value = textoInput.value.toUpperCase();
+        minusculasCheckbox.checked = false;
+      }
+      
+      if (minusculasCheckbox.checked) {
+        textoInput.value = textoInput.value.toLowerCase();
+        maiusculasCheckbox.checked = false;
+      }
+    }
+    
+    function trocarCheckbox(checkbox) {
+      var maiusculasCheckbox = document.getElementById('maiusculas');
+      var minusculasCheckbox = document.getElementById('minusculas');
+      
+      if (checkbox === maiusculasCheckbox) {
+        minusculasCheckbox.checked = false;
+      } else if (checkbox === minusculasCheckbox) {
+        maiusculasCheckbox.checked = false;
+      }
+      
+      transformarTexto();
+    }
+  </script>
+</body>
+</html>
