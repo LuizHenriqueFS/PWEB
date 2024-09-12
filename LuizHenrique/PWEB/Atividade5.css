@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minhaDiv {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 16px; 
+}
+
+@media (max-width: 420px) {
+    .minhaDiv {
+        background-color: grey;
+    }
+    h1::after {
+        content: "Cinza";
+    }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+    .minhaDiv {
+        background-color: orangered;
+    }
+    h1::after {
+        content: "Laranja";
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .minhaDiv {
+        background-color: palevioletred;
+    }
+    h1::after {
+        content: "Rosa";
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .minhaDiv {
+        background-color: rebeccapurple;
+    }
+    h1::after {
+        content: "Roxo";
+    }
+}
+
+@media (min-width: 1081px) and (max-width: 1366px) {
+    .minhaDiv {
+        background-color: yellow;
+    }
+    h1::after {
+        content: "Amarelo";
+    }
+}
+
+@media (min-width: 1367px) and (max-width: 1920px) {
+    .minhaDiv {
+        background-color: darkblue;
+    }
+    h1::after {
+        content: "Azul Escuro";
+    }
+}
+
+@media (min-width: 1921px) {
+    .minhaDiv {
+        background-color: green;
+    }
+    h1::after {
+        content: "Verde";
+    }
+}
