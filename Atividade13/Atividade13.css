@@ -1,0 +1,15 @@
+ #mensagem{
+    font-family: sans-serif;
+    color: rgb(5, 5, 5);
+}
+
+#img{
+    width: 80vh; 
+}
+
+body{
+    margin-top: 5vh;
+    background-color: snow;
+    font-family: 'Century Gothic', sans-serif;
+    text-align: center;
+}
