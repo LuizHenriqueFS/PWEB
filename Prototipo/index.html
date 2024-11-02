@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gerenciador de Tarefas - Kanban</h1>
+
+    <!-- Container Principal do Kanban -->
+    <div class="kanban-container">
+        <!-- Coluna 1: A Fazer -->
+        <div class="coluna" id="coluna1">
+            <h2>A Fazer</h2>
+            <button onclick="adicionarTarefa()">Nova Tarefa</button>
+            <div class="tarefas"></div>
+        </div>
+
+        <!-- Coluna 2: Em Progresso -->
+        <div class="coluna" id="coluna2">
+            <h2>Em Progresso</h2>
+            <div class="tarefas"></div>
+        </div>
+
+        <!-- Coluna 3: Concluído -->
+        <div class="coluna" id="coluna3">
+            <h2>Concluído</h2>
+            <div class="tarefas"></div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

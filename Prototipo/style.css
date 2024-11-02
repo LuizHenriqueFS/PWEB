@@ -1,0 +1,107 @@
+/* Reseta geral para as margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Container principal do Kanban */
+.kanban-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 15px;
+}
+
+.coluna {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+/* Título das colunas */
+.coluna h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Botão de nova tarefa */
+.coluna button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.coluna button:hover {
+    background-color: #0056b3;
+}
+
+/* Área de tarefas dentro de cada coluna */
+.tarefas {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo individual das tarefas */
+.tarefa {
+    padding: 10px;
+    background-color: #ececec;
+    border-radius: 4px;
+    cursor: grab;
+    font-size: 0.9rem;
+    color: #333;
+    border-left: 4px solid #ccc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-left-color 0.3s;
+}
+
+/* Estilos para tarefas concluídas */
+.tarefa.concluida {
+    background-color: #d4edda;
+    border-left-color: #28a745;
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+/* Estilos para tarefas com prazo próximo */
+.tarefa.prazo-proximo {
+    border-left-color: #ffc107;
+    background-color: #fff3cd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .kanban-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
